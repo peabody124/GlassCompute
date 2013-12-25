@@ -4,9 +4,13 @@ import java.util.HashMap;
 import java.util.LinkedList;
 
 import android.content.Context;
+import android.graphics.drawable.Drawable;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.view.animation.Animation;
+import android.view.animation.AnimationUtils;
+import android.view.animation.RotateAnimation;
 import android.widget.AdapterView;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
@@ -84,7 +88,8 @@ public class ResultsScrollAdapter extends CardScrollAdapter{
 		// Get and set the image results for current page
 		for(String imageUrl:results.getPodImageUrls(arg0)){
 			ImageView imageView = new ImageView(mContext);
-			UrlImageViewHelper.setUrlDrawable(imageView, imageUrl, android.R.drawable.presence_busy);
+			imageView.setPadding(0, 20, 0, 0);
+			UrlImageViewHelper.setUrlDrawable(imageView, imageUrl, R.drawable.stat_notify_sync);
 			linearLayout.addView(imageView);
 		}
 		return setItemOnCard(this, convertView);
