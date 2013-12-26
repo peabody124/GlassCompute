@@ -3,7 +3,7 @@ GlassCompute
 
 Unofficial WolframAlpha Glassware
 
-**To install: ** ./adb install GlassCompute.apk
+**To install:** ./adb install GlassCompute.apk
 
 Problems? Please submit patches or update issue tracker
 
