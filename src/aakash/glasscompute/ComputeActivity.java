@@ -57,7 +57,7 @@ public class ComputeActivity extends Activity {
 		// Build a request Url so we can query the GlassComputeServer
 		Uri.Builder serverUri = Uri.parse("http://ruxin.aaka.sh:8080").buildUpon();
 		//TODO: change
-		serverUri.appendQueryParameter("parsed", "true");
+		serverUri.appendQueryParameter("parsed", parsed);
 		serverUri.appendQueryParameter("q", query);
 		serverUri.build();
 		// Start downloading results object
