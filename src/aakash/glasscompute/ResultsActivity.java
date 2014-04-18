@@ -1,26 +1,17 @@
 package aakash.glasscompute;
 
 import java.util.ArrayList;
-import java.util.HashMap;
-import java.util.LinkedList;
-
 import android.app.Activity;
 import android.content.Context;
 import android.content.Intent;
 import android.hardware.Sensor;
 import android.hardware.SensorEvent;
 import android.hardware.SensorEventListener;
-import android.hardware.SensorListener;
 import android.hardware.SensorManager;
 import android.os.Bundle;
-import android.os.PowerManager;
 import android.util.Log;
-import android.view.LayoutInflater;
 import android.view.View;
-import android.widget.LinearLayout;
 import android.widget.ScrollView;
-import android.widget.TextView;
-
 import com.google.android.glass.widget.CardScrollView;
 import com.google.gson.Gson;
 
