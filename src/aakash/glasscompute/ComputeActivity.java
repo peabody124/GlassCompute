@@ -113,13 +113,13 @@ public class ComputeActivity extends Activity {
 			if(response.getStatus() == response.QUERY_NO_RESULTS){
 				Card card = new Card(getBaseContext());
 				card.setText("No results were found");
-				View cardView = card.toView();
+				View cardView = card.getView();
 				setContentView(cardView);
 			}
 			else if(response.getStatus() == response.QUERY_UNKNOWN_ERROR || response.getStatus() == response.URL_ARGS_ERROR){
 				Card card = new Card(getBaseContext());
 				card.setText("Error code: " + response.getStatus() + "\nPlease try again.");
-				View cardView = card.toView();
+				View cardView = card.getView();
 				setContentView(cardView);
 			}
 			

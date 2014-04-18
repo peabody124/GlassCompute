@@ -4,13 +4,9 @@ import java.util.HashMap;
 import java.util.LinkedList;
 
 import android.content.Context;
-import android.graphics.drawable.Drawable;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.view.animation.Animation;
-import android.view.animation.AnimationUtils;
-import android.view.animation.RotateAnimation;
 import android.widget.AdapterView;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
@@ -39,8 +35,8 @@ public class ResultsScrollAdapter extends CardScrollAdapter{
 	}
 	
 	@Override
-	public int findIdPosition(Object id) {
-		// Make sure object is infact the pod
+	public int getPosition(Object id) {
+		// Make sure object is in fact the pod
 		if (id instanceof HashMap) 
 		{	// convert to pod
 			HashMap<String, LinkedList<String>> obj = (HashMap<String, LinkedList<String>>)id;
@@ -59,9 +55,8 @@ public class ResultsScrollAdapter extends CardScrollAdapter{
 		return AdapterView.INVALID_POSITION;
 	}
 
-	@Override
 	public int findItemPosition(Object item) {
-		return findIdPosition(item);
+		return getPosition(item);
 	}
 
 	@Override
@@ -92,7 +87,6 @@ public class ResultsScrollAdapter extends CardScrollAdapter{
 			UrlImageViewHelper.setUrlDrawable(imageView, imageUrl, R.drawable.stat_notify_sync);
 			linearLayout.addView(imageView);
 		}
-		return setItemOnCard(this, convertView);
+		return convertView;
 	}
-
 }
